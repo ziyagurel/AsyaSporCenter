@@ -14,4 +14,14 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="NavigationText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:listDivider">@color/colorWhite</item>
+    </style>
+
+    <style name="linear_background">
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
 </resources>
