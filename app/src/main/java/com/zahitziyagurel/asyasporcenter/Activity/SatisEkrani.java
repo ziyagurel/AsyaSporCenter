@@ -5,13 +5,15 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
+import android.view.Menu;
 
 import com.zahitziyagurel.asyasporcenter.Adapter.satis_tabbed_adapter;
 import com.zahitziyagurel.asyasporcenter.R;
 
 public class SatisEkrani extends AppCompatActivity {
-
+    private SearchView search;
     private String TAG = getClass().getName();
     satis_tabbed_adapter adapter;
 
@@ -26,7 +28,7 @@ public class SatisEkrani extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.satis_tabs);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
